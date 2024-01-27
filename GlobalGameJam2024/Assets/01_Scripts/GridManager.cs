@@ -15,7 +15,10 @@ namespace CeltaGames
         [SerializeField] Vector2 _visualOffset = Vector2.zero; 
         
         int _gridLength = 4;
-        
+
+        public List<CellVisual> CellVisuals => _cellVisuals;
+
+
         void Awake() => InitializeGrid();
 
         void InitializeGrid()
@@ -31,16 +34,17 @@ namespace CeltaGames
                         parent = _cellsParent
                     }
                 };
-
                 var sr = go.AddComponent<SpriteRenderer>();
-                sr.sprite = _cellVisuals[i-1].CellSprite;
+                sr.sprite = CellVisuals[i-1].CellSprite;
+                sr.color = CellVisuals[i - 1].Color;
+                var hitBoxType = go.AddComponent<HitBoxTypeComponent>();
+                hitBoxType.Type = CellVisuals[i - 1].Type;
             }
         }
 
         void OnValidate()
         {
-            _gridLength = _cellVisuals.Count;
-            Debug.Log($"Cells number: {_gridLength}");
+            _gridLength = CellVisuals.Count;
         }
     }
 }
