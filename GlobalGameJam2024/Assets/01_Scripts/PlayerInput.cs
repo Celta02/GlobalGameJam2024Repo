@@ -28,6 +28,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             ""id"": ""60720723-9ff6-4b22-8198-24aaf5d53a2a"",
             ""actions"": [
                 {
+                    ""name"": ""Hit"",
+                    ""type"": ""Button"",
+                    ""id"": ""43e85871-aa54-4b99-91b9-4e663883af86"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
                     ""name"": ""Cell_1"",
                     ""type"": ""Button"",
                     ""id"": ""183fba13-da00-483d-ad6d-566fdb8737f5"",
@@ -67,17 +76,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""6b80d1fd-d60f-4f81-b072-aa6c6c0ee1c8"",
-                    ""path"": ""<Keyboard>/a"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Cell_1"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""5208793a-f5ee-4a36-852f-616216ec1c72"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
@@ -108,6 +106,28 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Cell_4"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5c4bc78d-1ebe-4681-a2ca-16388bbf8e44"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Hit"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""6b80d1fd-d60f-4f81-b072-aa6c6c0ee1c8"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cell_1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -116,6 +136,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
+        m_Player_Hit = m_Player.FindAction("Hit", throwIfNotFound: true);
         m_Player_Cell_1 = m_Player.FindAction("Cell_1", throwIfNotFound: true);
         m_Player_Cell_2 = m_Player.FindAction("Cell_2", throwIfNotFound: true);
         m_Player_Cell_3 = m_Player.FindAction("Cell_3", throwIfNotFound: true);
@@ -181,6 +202,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
+    private readonly InputAction m_Player_Hit;
     private readonly InputAction m_Player_Cell_1;
     private readonly InputAction m_Player_Cell_2;
     private readonly InputAction m_Player_Cell_3;
@@ -189,6 +211,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     {
         private @PlayerInput m_Wrapper;
         public PlayerActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Hit => m_Wrapper.m_Player_Hit;
         public InputAction @Cell_1 => m_Wrapper.m_Player_Cell_1;
         public InputAction @Cell_2 => m_Wrapper.m_Player_Cell_2;
         public InputAction @Cell_3 => m_Wrapper.m_Player_Cell_3;
@@ -202,6 +225,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
+            @Hit.started += instance.OnHit;
+            @Hit.performed += instance.OnHit;
+            @Hit.canceled += instance.OnHit;
             @Cell_1.started += instance.OnCell_1;
             @Cell_1.performed += instance.OnCell_1;
             @Cell_1.canceled += instance.OnCell_1;
@@ -218,6 +244,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IPlayerActions instance)
         {
+            @Hit.started -= instance.OnHit;
+            @Hit.performed -= instance.OnHit;
+            @Hit.canceled -= instance.OnHit;
             @Cell_1.started -= instance.OnCell_1;
             @Cell_1.performed -= instance.OnCell_1;
             @Cell_1.canceled -= instance.OnCell_1;
@@ -249,6 +278,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     public PlayerActions @Player => new PlayerActions(this);
     public interface IPlayerActions
     {
+        void OnHit(InputAction.CallbackContext context);
         void OnCell_1(InputAction.CallbackContext context);
         void OnCell_2(InputAction.CallbackContext context);
         void OnCell_3(InputAction.CallbackContext context);

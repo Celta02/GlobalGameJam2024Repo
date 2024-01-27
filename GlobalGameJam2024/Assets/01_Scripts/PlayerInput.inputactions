@@ -6,6 +6,15 @@
             "id": "60720723-9ff6-4b22-8198-24aaf5d53a2a",
             "actions": [
                 {
+                    "name": "Hit",
+                    "type": "Button",
+                    "id": "43e85871-aa54-4b99-91b9-4e663883af86",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Cell_1",
                     "type": "Button",
                     "id": "183fba13-da00-483d-ad6d-566fdb8737f5",
@@ -45,17 +54,6 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "6b80d1fd-d60f-4f81-b072-aa6c6c0ee1c8",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Cell_1",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "5208793a-f5ee-4a36-852f-616216ec1c72",
                     "path": "<Keyboard>/s",
                     "interactions": "",
@@ -84,6 +82,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Cell_4",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c4bc78d-1ebe-4681-a2ca-16388bbf8e44",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Hit",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6b80d1fd-d60f-4f81-b072-aa6c6c0ee1c8",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Cell_1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -221,7 +221,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -391,6 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24328141aac34e0e8c38d154b09bb5d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _hitEmitter: {fileID: 11400000, guid: e09ee1ea58f943b47ab9fe64d7a0a3ce, type: 2}
   _playerPosition: {fileID: 11400000, guid: 357c03c7f47c2b544a5c28ac48b1654f, type: 2}
 --- !u!4 &724155033
 Transform:
@@ -518,7 +519,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1245332691}
+  - component: {fileID: 1245332693}
   - component: {fileID: 1245332692}
+  - component: {fileID: 1245332694}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -593,3 +596,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1245332693
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245332690}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 995af07d5b0355543a447be723f27750, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1245332694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245332690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee1ff4470ab4c62b3368bb9165c71e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 1245332693}
+  _hitEmitter: {fileID: 11400000, guid: e09ee1ea58f943b47ab9fe64d7a0a3ce, type: 2}

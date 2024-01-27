@@ -8,7 +8,7 @@ namespace CeltaGames.ScriptableObjects
     {
         [SerializeField] int _currentPosition;
 
-        readonly List<PositionListener> _listeners = new List<PositionListener>();
+        readonly List<PositionListener> _listeners = new ();
 
         public int CurrentPosition => _currentPosition;
 
