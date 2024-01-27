@@ -16,11 +16,14 @@ namespace CeltaGames
         [SerializeField] Vector2 _firstHitBoxPosition = Vector2.zero;
         
         readonly List<HitBox> _hitBoxes = new ();
+        HitBox _currentHitBox;
         PlayerHitListener _hitListener;
         ObjectPool<HitBox> _pool;
         Vector3 _lastPosition;
 
+        public HitBoxType CurrentHitBoxType => _currentHitBox.Type.Type;
         public Vector3 LastPosition => _lastPosition;
+
 
 
         void OnEnable() => _hitEmitter.RegisterListener(_hitListener);
@@ -46,6 +49,8 @@ namespace CeltaGames
                     new Vector3(_firstHitBoxPosition.x + i * _spacing, _firstHitBoxPosition.y, 0f);
                 _hitBoxes.Add(hitBox);
             }
+
+            _currentHitBox = _hitBoxes[0];
         }
 
 
@@ -53,6 +58,7 @@ namespace CeltaGames
         {
             _hitBoxes[0].GotHit();
             _hitBoxes.RemoveAt(0);
+            _currentHitBox = _hitBoxes[0];
             foreach (var hitBox in _hitBoxes) hitBox.transform.Translate(Vector3.left * _spacing);
             _hitBoxes.Add(_pool.Get());
         }

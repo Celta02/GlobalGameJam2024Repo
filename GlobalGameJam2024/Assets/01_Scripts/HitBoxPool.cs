@@ -46,6 +46,7 @@ namespace CeltaGames
             sr.sprite = cellVisual.CellSprite;
             sr.color = cellVisual.Color;
             var hitBoxType = go.AddComponent<HitBoxTypeComponent>();
+            hitBox.Type = hitBoxType;
             hitBoxType.Type = cellVisual.Type;
             
             go.SetActive(false);
@@ -54,7 +55,7 @@ namespace CeltaGames
 
         void GetHitBox(HitBox hitBox)
         {
-            hitBox.transform.position = _hitBoxQueue.LastPosition; //TODO Move to HitBoxQueue
+            hitBox.transform.position = _hitBoxQueue.LastPosition;
             hitBox.gameObject.SetActive(true);
         }
 

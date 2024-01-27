@@ -7,6 +7,8 @@ namespace CeltaGames
     {
         [SerializeField] PlayerHitEmitter _hitEmitter;
         [SerializeField] PlayerPosition _playerPosition;
+        [SerializeField] PlayerGrid _playerGrid;
+        [SerializeField] HitBoxQueue _hitBoxQueue;
         
         PlayerInput _controls;
 
@@ -25,8 +27,8 @@ namespace CeltaGames
 
         void OnHit()
         {
-            //TODO check if it was a successful hit
-            _hitEmitter.BroadcastHit(true);
+            var cell =_playerGrid.GetCellAtPosition(_playerPosition.CurrentPosition);
+            _hitEmitter.BroadcastHit(cell.Type == _hitBoxQueue.CurrentHitBoxType);
         }
 
         void Move(int cellPosition)

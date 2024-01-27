@@ -39,6 +39,7 @@ namespace CeltaGames
                 sr.color = CellVisuals[i - 1].Color;
                 var hitBoxType = go.AddComponent<HitBoxTypeComponent>();
                 hitBoxType.Type = CellVisuals[i - 1].Type;
+                _playerGrid.GetCellAtPosition(i).Type = hitBoxType.Type;
             }
         }
 
