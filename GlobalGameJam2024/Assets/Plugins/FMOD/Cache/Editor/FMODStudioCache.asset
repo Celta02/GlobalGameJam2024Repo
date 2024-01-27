@@ -1,5 +1,79 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9084820875267322971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Note_4
+  m_EditorClassIdentifier: 
+  Path: event:/Note_4
+  Guid:
+    Data1: 1586001383
+    Data2: 1282792331
+    Data3: -1256708708
+    Data4: 1124804048
+  Banks:
+  - {fileID: -3540337121355317830}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-5586319557562428018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Note_2
+  m_EditorClassIdentifier: 
+  Path: event:/Note_2
+  Guid:
+    Data1: -982400771
+    Data2: 1131580945
+    Data3: -1762445392
+    Data4: 1127449866
+  Banks:
+  - {fileID: -3540337121355317830}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-3540337121355317830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/MouseNotes.bank
+  m_EditorClassIdentifier: 
+  Path: ../GGJ2024_FMOD/Build/Desktop/MouseNotes.bank
+  Name: MouseNotes
+  StudioPath: bank:/MouseNotes
+  lastModified: 638419634277922870
+  FileSizes:
+  - Name: Desktop
+    Value: 5002
+  Exists: 1
 --- !u!114 &-2293962590096900058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,11 +89,38 @@ MonoBehaviour:
   Path: ../GGJ2024_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638419069808565024
+  lastModified: 638419634277842032
   FileSizes:
   - Name: Desktop
     Value: 1012
   Exists: 1
+--- !u!114 &-75213907721937696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Note_5
+  m_EditorClassIdentifier: 
+  Path: event:/Note_5
+  Guid:
+    Data1: -977321007
+    Data2: 1138938029
+    Data3: -2095963994
+    Data4: 341586538
+  Banks:
+  - {fileID: -3540337121355317830}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35,14 +136,47 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: 5173668762121723645}
   - {fileID: -2293962590096900058}
-  EditorEvents: []
+  - {fileID: -3540337121355317830}
+  EditorEvents:
+  - {fileID: 5377474351770554838}
+  - {fileID: 481203134357599851}
+  - {fileID: -75213907721937696}
+  - {fileID: -9084820875267322971}
+  - {fileID: -5586319557562428018}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2293962590096900058}
   StringsBanks:
   - {fileID: 5173668762121723645}
-  cacheTime: 638419069808580107
+  cacheTime: 638419634277922870
   cacheVersion: 131603
+--- !u!114 &481203134357599851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Note_3
+  m_EditorClassIdentifier: 
+  Path: event:/Note_3
+  Guid:
+    Data1: -905175100
+    Data2: 1240581504
+    Data3: 2104570808
+    Data4: 1490994293
+  Banks:
+  - {fileID: -3540337121355317830}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
 --- !u!114 &5173668762121723645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,8 +192,35 @@ MonoBehaviour:
   Path: ../GGJ2024_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638419069808580107
+  lastModified: 638419634277857110
   FileSizes:
   - Name: Desktop
-    Value: 700
+    Value: 936
   Exists: 1
+--- !u!114 &5377474351770554838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Note_1
+  m_EditorClassIdentifier: 
+  Path: event:/Note_1
+  Guid:
+    Data1: 1971479478
+    Data2: 1280913636
+    Data3: 368855999
+    Data4: -578005939
+  Banks:
+  - {fileID: -3540337121355317830}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0

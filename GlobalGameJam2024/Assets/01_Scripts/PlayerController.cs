@@ -30,7 +30,7 @@ namespace CeltaGames
         void OnHit()
         {
             var cell =_playerGrid.GetCellAtPosition(_playerPosition.CurrentPosition);
-            _hitEmitter.BroadcastHit(cell.Type == _hitBoxQueue.CurrentHitBoxType);
+            _hitEmitter.BroadcastHit(cell.Type == _hitBoxQueue.CurrentHitBoxType, cell.Type);
         }
 
         void Move(int cellPosition)

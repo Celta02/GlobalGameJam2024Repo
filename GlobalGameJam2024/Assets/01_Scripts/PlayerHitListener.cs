@@ -4,9 +4,9 @@ namespace CeltaGames
 {
     public class PlayerHitListener
     {
-        readonly Action<bool> _onHit;
+        readonly Action<bool, HitBoxType> _onHit;
 
-        public PlayerHitListener(Action<bool> onHit) => _onHit = onHit;
-        public void OnHit(bool wasHitSuccessful) => _onHit.Invoke(wasHitSuccessful);
+        public PlayerHitListener(Action<bool, HitBoxType> onHit) => _onHit = onHit;
+        public void OnHit(bool wasHitSuccessful, HitBoxType hitBoxType) => _onHit.Invoke(wasHitSuccessful, hitBoxType);
     }
 }

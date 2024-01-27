@@ -18,7 +18,7 @@ namespace CeltaGames
         void Awake() => _hitListener = new PlayerHitListener(OnHit);
 
 
-        void OnHit(bool wasHitSuccessful)
+        void OnHit(bool wasHitSuccessful, HitBoxType hitBoxType)
         {
             _animator.SetTrigger(wasHitSuccessful ? SuccessfulHit : FailedHit);
         }

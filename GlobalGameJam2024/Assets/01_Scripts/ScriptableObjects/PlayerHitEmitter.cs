@@ -8,9 +8,9 @@ namespace CeltaGames.ScriptableObjects
     {
         readonly List<PlayerHitListener> _listeners = new ();
 
-        public void BroadcastHit(bool wasHitSuccessful)
+        public void BroadcastHit(bool wasHitSuccessful, HitBoxType hitBoxType)
         {
-            foreach (var listener in _listeners) listener.OnHit(wasHitSuccessful);
+            foreach (var listener in _listeners) listener.OnHit(wasHitSuccessful, hitBoxType);
         }
 
         public void RegisterListener(PlayerHitListener listener) => _listeners.Add(listener);

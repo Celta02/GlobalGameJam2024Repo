@@ -22,9 +22,7 @@ namespace CeltaGames
             _catMood.SetMood(_startingHappiness);
         }
 
-        void OnHit(bool wasHitSuccessful)
-        {
+        void OnHit(bool wasHitSuccessful, HitBoxType hitBoxType) => 
             _catMood.ChangeMood(wasHitSuccessful? _successReward:_failurePunishment);
-        }
     }
 }

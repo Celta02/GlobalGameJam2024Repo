@@ -54,7 +54,7 @@ namespace CeltaGames
         }
 
 
-        void OnHit(bool wasHitSuccessful)
+        void OnHit(bool wasHitSuccessful, HitBoxType hitBoxType)
         {
             _hitBoxes[0].GotHit();
             _hitBoxes.RemoveAt(0);
