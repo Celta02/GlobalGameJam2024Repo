@@ -71,6 +71,15 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Cell_5"",
+                    ""type"": ""Button"",
+                    ""id"": ""d69181fe-9179-41c1-9b43-6f6f1766a763"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -128,6 +137,17 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
                     ""action"": ""Cell_1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d3fbc657-96be-49cf-bb73-f541022bed26"",
+                    ""path"": ""<Keyboard>/g"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Cell_5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -141,6 +161,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         m_Player_Cell_2 = m_Player.FindAction("Cell_2", throwIfNotFound: true);
         m_Player_Cell_3 = m_Player.FindAction("Cell_3", throwIfNotFound: true);
         m_Player_Cell_4 = m_Player.FindAction("Cell_4", throwIfNotFound: true);
+        m_Player_Cell_5 = m_Player.FindAction("Cell_5", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -207,6 +228,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Cell_2;
     private readonly InputAction m_Player_Cell_3;
     private readonly InputAction m_Player_Cell_4;
+    private readonly InputAction m_Player_Cell_5;
     public struct PlayerActions
     {
         private @PlayerInput m_Wrapper;
@@ -216,6 +238,7 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         public InputAction @Cell_2 => m_Wrapper.m_Player_Cell_2;
         public InputAction @Cell_3 => m_Wrapper.m_Player_Cell_3;
         public InputAction @Cell_4 => m_Wrapper.m_Player_Cell_4;
+        public InputAction @Cell_5 => m_Wrapper.m_Player_Cell_5;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -240,6 +263,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Cell_4.started += instance.OnCell_4;
             @Cell_4.performed += instance.OnCell_4;
             @Cell_4.canceled += instance.OnCell_4;
+            @Cell_5.started += instance.OnCell_5;
+            @Cell_5.performed += instance.OnCell_5;
+            @Cell_5.canceled += instance.OnCell_5;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -259,6 +285,9 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
             @Cell_4.started -= instance.OnCell_4;
             @Cell_4.performed -= instance.OnCell_4;
             @Cell_4.canceled -= instance.OnCell_4;
+            @Cell_5.started -= instance.OnCell_5;
+            @Cell_5.performed -= instance.OnCell_5;
+            @Cell_5.canceled -= instance.OnCell_5;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -283,5 +312,6 @@ public partial class @PlayerInput: IInputActionCollection2, IDisposable
         void OnCell_2(InputAction.CallbackContext context);
         void OnCell_3(InputAction.CallbackContext context);
         void OnCell_4(InputAction.CallbackContext context);
+        void OnCell_5(InputAction.CallbackContext context);
     }
 }

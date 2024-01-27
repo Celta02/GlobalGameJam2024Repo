@@ -23,6 +23,7 @@ namespace CeltaGames
             _controls.Player.Cell_2.started += ctx=> Move(2);
             _controls.Player.Cell_3.started += ctx=> Move(3);
             _controls.Player.Cell_4.started += ctx=> Move(4);
+            _controls.Player.Cell_5.started += ctx=> Move(5);
         }
 
         void OnHit()
