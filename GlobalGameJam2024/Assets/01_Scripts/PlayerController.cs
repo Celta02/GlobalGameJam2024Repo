@@ -1,5 +1,6 @@
 ﻿using CeltaGames.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace CeltaGames
 {
