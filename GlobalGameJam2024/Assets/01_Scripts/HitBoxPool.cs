@@ -11,6 +11,7 @@ namespace CeltaGames
         [SerializeField] HitBox _prefab;
         [SerializeField] HitBoxQueue _hitBoxQueue;
         [SerializeField] Transform _hitBoxParent;
+        // [SerializeField] int _hitBoxLayerMask;
         [SerializeField] int _defaultPoolCapacity = 15;
         [SerializeField] int _poolMaxSize = 25;
         [SerializeField] int _initialPoolAmount = 12;
@@ -42,12 +43,14 @@ namespace CeltaGames
             var cellVisual = GetRandomVisual();
             
             var go = hitBox.gameObject;
-            var sr = go.AddComponent<SpriteRenderer>();
-            sr.sprite = cellVisual.CellSprite;
-            sr.color = cellVisual.Color;
+
             var hitBoxType = go.AddComponent<HitBoxTypeComponent>();
             hitBox.Type = hitBoxType;
             hitBoxType.Type = cellVisual.Type;
+            
+            if (!go.TryGetComponent(out SpriteRenderer sr)) return hitBox;
+            sr.sprite = cellVisual.CellSprite;
+            sr.color = cellVisual.Color;
             
             go.SetActive(false);
             return hitBox;

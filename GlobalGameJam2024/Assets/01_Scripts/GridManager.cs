@@ -26,20 +26,18 @@ namespace CeltaGames
             _playerGrid.Setup(_firstCellPosition, _gridLength, _spacing);
             for (int i = 1; i <= _gridLength; i++)
             {
-                var go = new GameObject("Cell")
-                {
-                    transform =
-                    {
-                        position = _playerGrid.GetCellPosition(i) + (Vector3)_visualOffset,
-                        parent = _cellsParent
-                    }
-                };
-                var sr = go.AddComponent<SpriteRenderer>();
-                sr.sprite = CellVisuals[i-1].CellSprite;
-                sr.color = CellVisuals[i - 1].Color;
+                var go = Instantiate(CellVisuals[i - 1].Prefab,
+                    _playerGrid.GetCellPosition(i) + (Vector3)_visualOffset,
+                    Quaternion.identity, 
+                    _cellsParent);
+                
                 var hitBoxType = go.AddComponent<HitBoxTypeComponent>();
                 hitBoxType.Type = CellVisuals[i - 1].Type;
                 _playerGrid.GetCellAtPosition(i).Type = hitBoxType.Type;
+                
+                if (!go.TryGetComponent(out SpriteRenderer sr)) return;
+                sr.sprite = CellVisuals[i-1].CellSprite;
+                sr.color = CellVisuals[i-1].Color;
             }
         }
 

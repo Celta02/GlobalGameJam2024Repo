@@ -14,19 +14,18 @@ namespace CeltaGames
         [SerializeField] StudioEventEmitter _mouse_note_3;
         [SerializeField] StudioEventEmitter _mouse_note_4;
         [SerializeField] StudioEventEmitter _mouse_note_5;
+        [SerializeField] StudioEventEmitter _mouse_fail;
 
         PlayerHitListener _hitListener;
 
         void OnEnable() => _hitEmitter.RegisterListener(_hitListener);
         void OnDisable() => _hitEmitter.UnregisterListener(_hitListener);
 
-        void Awake()
-        {
-            _hitListener = new PlayerHitListener(OnPlayerHit);
-        }
+        void Awake() => _hitListener = new PlayerHitListener(OnPlayerHit);
 
         void OnPlayerHit(bool wasSuccessful, HitBoxType hitBoxType)
         {
+            if (!wasSuccessful) _mouse_fail.Play();
             switch (hitBoxType)
             {
                 case HitBoxType.Red:

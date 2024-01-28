@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Background
+    uniqueID: 1848350007
+    locked: 0
+  - name: Cat
+    uniqueID: 1935724563
+    locked: 0
+  - name: HitBox Queue
+    uniqueID: 2208627889
+    locked: 0
+  - name: Player
+    uniqueID: 1902106455
+    locked: 0
+  - name: Cells
+    uniqueID: 3450051419
+    locked: 0

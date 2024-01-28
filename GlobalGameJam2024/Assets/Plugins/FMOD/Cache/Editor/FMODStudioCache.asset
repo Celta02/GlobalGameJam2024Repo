@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9084820875267322971
+--- !u!114 &-8293939539488895766
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Note_4
+  m_Name: event:/MouseNote_5
   m_EditorClassIdentifier: 
-  Path: event:/Note_4
+  Path: event:/MouseNote_5
   Guid:
-    Data1: 1586001383
-    Data2: 1282792331
-    Data3: -1256708708
-    Data4: 1124804048
+    Data1: -834214475
+    Data2: 1234928549
+    Data3: 1406727083
+    Data4: 2131823790
   Banks:
   - {fileID: -3540337121355317830}
   IsStream: 0
@@ -26,8 +26,8 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
---- !u!114 &-5586319557562428018
+  Length: 360
+--- !u!114 &-7401934152826173339
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37,14 +37,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Note_2
+  m_Name: event:/FailNote
   m_EditorClassIdentifier: 
-  Path: event:/Note_2
+  Path: event:/FailNote
   Guid:
-    Data1: -982400771
-    Data2: 1131580945
-    Data3: -1762445392
-    Data4: 1127449866
+    Data1: 1885435238
+    Data2: 1307590409
+    Data3: -132492903
+    Data4: 1031044835
   Banks:
   - {fileID: -3540337121355317830}
   IsStream: 0
@@ -53,7 +53,34 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 500
+--- !u!114 &-5410518811994443929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MouseNote_4
+  m_EditorClassIdentifier: 
+  Path: event:/MouseNote_4
+  Guid:
+    Data1: 1853717006
+    Data2: 1177830422
+    Data3: -1322775631
+    Data4: 1241946795
+  Banks:
+  - {fileID: -3540337121355317830}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 400
 --- !u!114 &-3540337121355317830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -69,10 +96,10 @@ MonoBehaviour:
   Path: ../GGJ2024_FMOD/Build/Desktop/MouseNotes.bank
   Name: MouseNotes
   StudioPath: bank:/MouseNotes
-  lastModified: 638419634277922870
+  lastModified: 638420450999768871
   FileSizes:
   - Name: Desktop
-    Value: 5002
+    Value: 141920
   Exists: 1
 --- !u!114 &-2293962590096900058
 MonoBehaviour:
@@ -89,12 +116,12 @@ MonoBehaviour:
   Path: ../GGJ2024_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638419634277842032
+  lastModified: 638420450998021293
   FileSizes:
   - Name: Desktop
     Value: 1012
   Exists: 1
---- !u!114 &-75213907721937696
+--- !u!114 &-2069986354560025769
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -104,14 +131,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Note_5
+  m_Name: event:/MouseNote_1
   m_EditorClassIdentifier: 
-  Path: event:/Note_5
+  Path: event:/MouseNote_1
   Guid:
-    Data1: -977321007
-    Data2: 1138938029
-    Data3: -2095963994
-    Data4: 341586538
+    Data1: 1879518150
+    Data2: 1213494580
+    Data3: -181559914
+    Data4: 1793645223
   Banks:
   - {fileID: -3540337121355317830}
   IsStream: 0
@@ -120,7 +147,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 400
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,19 +165,20 @@ MonoBehaviour:
   - {fileID: -2293962590096900058}
   - {fileID: -3540337121355317830}
   EditorEvents:
-  - {fileID: 5377474351770554838}
-  - {fileID: 481203134357599851}
-  - {fileID: -75213907721937696}
-  - {fileID: -9084820875267322971}
-  - {fileID: -5586319557562428018}
+  - {fileID: -5410518811994443929}
+  - {fileID: 8117220395903392844}
+  - {fileID: -7401934152826173339}
+  - {fileID: -8293939539488895766}
+  - {fileID: -2069986354560025769}
+  - {fileID: 1789181149998568067}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2293962590096900058}
   StringsBanks:
   - {fileID: 5173668762121723645}
-  cacheTime: 638419634277922870
+  cacheTime: 638420450999768871
   cacheVersion: 131603
---- !u!114 &481203134357599851
+--- !u!114 &1789181149998568067
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -160,14 +188,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Note_3
+  m_Name: event:/MouseNote_3
   m_EditorClassIdentifier: 
-  Path: event:/Note_3
+  Path: event:/MouseNote_3
   Guid:
-    Data1: -905175100
-    Data2: 1240581504
-    Data3: 2104570808
-    Data4: 1490994293
+    Data1: 2111712722
+    Data2: 1329535353
+    Data3: 310220679
+    Data4: 1123817118
   Banks:
   - {fileID: -3540337121355317830}
   IsStream: 0
@@ -176,7 +204,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 220
 --- !u!114 &5173668762121723645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,12 +220,12 @@ MonoBehaviour:
   Path: ../GGJ2024_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638419634277857110
+  lastModified: 638420450998031324
   FileSizes:
   - Name: Desktop
-    Value: 936
+    Value: 992
   Exists: 1
---- !u!114 &5377474351770554838
+--- !u!114 &8117220395903392844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,14 +235,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/Note_1
+  m_Name: event:/MouseNote_2
   m_EditorClassIdentifier: 
-  Path: event:/Note_1
+  Path: event:/MouseNote_2
   Guid:
-    Data1: 1971479478
-    Data2: 1280913636
-    Data3: 368855999
-    Data4: -578005939
+    Data1: -1928064943
+    Data2: 1077266188
+    Data3: 1753357499
+    Data4: 924754257
   Banks:
   - {fileID: -3540337121355317830}
   IsStream: 0
@@ -223,4 +251,4 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 320
