@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 78c2ba3b7c38d644296cd73b01333c35
+guid: cd13586be5fa68a49b4bfc617bc0122f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,11 +43,11 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 7
-  spritePivot: {x: 0.5, y: 0}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 125
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -134,18 +134,128 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Gato_Neutral_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1442
+        height: 1259
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fb95e95d0fa63142b4f68adc7abead6
+      internalID: -1195899299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gato_Neutral_1
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 0
+        width: 1442
+        height: 1259
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b353124aedae34283d3f37bcf2d6b7
+      internalID: -792564729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gato_Neutral_2
+      rect:
+        serializedVersion: 2
+        x: 2884
+        y: 0
+        width: 1442
+        height: 1259
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e9ae77c51918345acd90fb56aa3617
+      internalID: -888134521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gato_Neutral_3
+      rect:
+        serializedVersion: 2
+        x: 4326
+        y: 0
+        width: 1442
+        height: 1259
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07067babc9a8d9e438724e5f9f16dae0
+      internalID: -780836406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gato_Neutral_4
+      rect:
+        serializedVersion: 2
+        x: 5768
+        y: 0
+        width: 1442
+        height: 1259
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7135631e023f71f4c9fa0e3030c0dab0
+      internalID: -621639564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gato_Neutral_0: -1195899299
+      Gato_Neutral_1: -792564729
+      Gato_Neutral_2: -888134521
+      Gato_Neutral_3: -780836406
+      Gato_Neutral_4: -621639564
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

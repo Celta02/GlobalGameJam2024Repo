@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace CeltaGames.ScriptableObjects
@@ -7,7 +8,7 @@ namespace CeltaGames.ScriptableObjects
     public class CatMood : ScriptableObject
     {
         [SerializeField] float _maxMood = 1000f;
-        float _currentMood;
+        [SerializeField] float _currentMood;
         
         readonly List<MoodListener> _listeners = new ();
 
@@ -26,7 +27,6 @@ namespace CeltaGames.ScriptableObjects
 
         public void RegisterListener(MoodListener listener) => _listeners.Add(listener);
         public void UnregisterListener(MoodListener listener) => _listeners.Remove(listener);
-
-
+        
     }
 }

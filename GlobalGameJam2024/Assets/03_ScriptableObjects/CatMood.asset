@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: CatMood
   m_EditorClassIdentifier: 
   _maxMood: 1000
+  _currentMood: 330
