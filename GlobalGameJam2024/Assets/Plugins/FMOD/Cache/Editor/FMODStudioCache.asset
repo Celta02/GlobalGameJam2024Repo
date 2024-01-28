@@ -81,6 +81,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 400
+--- !u!114 &-3566185221901099519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Music.bank
+  m_EditorClassIdentifier: 
+  Path: ../GGJ2024_FMOD/Build/Desktop/Music.bank
+  Name: Music
+  StudioPath: bank:/Music
+  lastModified: 638420506839553849
+  FileSizes:
+  - Name: Desktop
+    Value: 4266880
+  Exists: 1
 --- !u!114 &-3540337121355317830
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +116,7 @@ MonoBehaviour:
   Path: ../GGJ2024_FMOD/Build/Desktop/MouseNotes.bank
   Name: MouseNotes
   StudioPath: bank:/MouseNotes
-  lastModified: 638420450999768871
+  lastModified: 638420506800982468
   FileSizes:
   - Name: Desktop
     Value: 141920
@@ -116,7 +136,7 @@ MonoBehaviour:
   Path: ../GGJ2024_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638420450998021293
+  lastModified: 638420506800698246
   FileSizes:
   - Name: Desktop
     Value: 1012
@@ -148,6 +168,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 400
+--- !u!114 &-271440022073978696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/MainTheme
+  m_EditorClassIdentifier: 
+  Path: event:/MainTheme
+  Guid:
+    Data1: -981753749
+    Data2: 1223254321
+    Data3: -1142847076
+    Data4: -1448770717
+  Banks:
+  - {fileID: -3566185221901099519}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 84648
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +211,7 @@ MonoBehaviour:
   - {fileID: 5173668762121723645}
   - {fileID: -2293962590096900058}
   - {fileID: -3540337121355317830}
+  - {fileID: -3566185221901099519}
   EditorEvents:
   - {fileID: -5410518811994443929}
   - {fileID: 8117220395903392844}
@@ -171,12 +219,15 @@ MonoBehaviour:
   - {fileID: -8293939539488895766}
   - {fileID: -2069986354560025769}
   - {fileID: 1789181149998568067}
+  - {fileID: 3734718278535987355}
+  - {fileID: -271440022073978696}
+  - {fileID: 6252980413944074690}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2293962590096900058}
   StringsBanks:
   - {fileID: 5173668762121723645}
-  cacheTime: 638420450999768871
+  cacheTime: 638420506839553849
   cacheVersion: 131603
 --- !u!114 &1789181149998568067
 MonoBehaviour:
@@ -205,6 +256,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 220
+--- !u!114 &3734718278535987355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BadEnding
+  m_EditorClassIdentifier: 
+  Path: event:/BadEnding
+  Guid:
+    Data1: -1293429426
+    Data2: 1215066067
+    Data3: -1790339701
+    Data4: 1609614921
+  Banks:
+  - {fileID: -3566185221901099519}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 148989
 --- !u!114 &5173668762121723645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,11 +298,38 @@ MonoBehaviour:
   Path: ../GGJ2024_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638420450998031324
+  lastModified: 638420506800718186
   FileSizes:
   - Name: Desktop
-    Value: 992
+    Value: 1158
   Exists: 1
+--- !u!114 &6252980413944074690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/GoodEnding
+  m_EditorClassIdentifier: 
+  Path: event:/GoodEnding
+  Guid:
+    Data1: -286465055
+    Data2: 1283905730
+    Data3: 1909611427
+    Data4: 678962556
+  Banks:
+  - {fileID: -3566185221901099519}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 96375
 --- !u!114 &8117220395903392844
 MonoBehaviour:
   m_ObjectHideFlags: 0
