@@ -1020,6 +1020,11 @@ MonoBehaviour:
   _prefab: {fileID: 8964183700002112918, guid: 98f64a18e6588404a8e9c4180ebf3c03, type: 3}
   _hitBoxQueue: {fileID: 902355860}
   _hitBoxParent: {fileID: 1894582943}
+  _orangeVisual: {fileID: 11400000, guid: 03667c80d1d533040a2369928c6dabdb, type: 2}
+  _blueVisual: {fileID: 11400000, guid: df81b26f0f8014641841466eed34d8d9, type: 2}
+  _yellowVisual: {fileID: 11400000, guid: 6ea807f58aff3b445bb6f5e327a95c8d, type: 2}
+  _greenVisual: {fileID: 11400000, guid: 7a2957d7bc0289548a8f01685b4d5b55, type: 2}
+  _cyanVisual: {fileID: 11400000, guid: f171c24f50e388249a1f0542a280d34d, type: 2}
   _defaultPoolCapacity: 15
   _poolMaxSize: 25
   _initialPoolAmount: 12
@@ -1244,15 +1249,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerGrid: {fileID: 11400000, guid: 6fc67a43a76980444a3be49650ed2114, type: 2}
   _cellsParent: {fileID: 728600511}
-  _firstCellPosition: {x: -7.5, y: -2}
-  _spacing: 1.5
+  _firstCellPosition: {x: -8, y: -2}
+  _spacing: 2.5
   _cellVisuals:
   - {fileID: 11400000, guid: f992f5a710c54eb4ca818bb24ac5b381, type: 2}
   - {fileID: 11400000, guid: 46224d36ec1a3bf4ebb0af49466a7c8d, type: 2}
   - {fileID: 11400000, guid: ffc659100415b6547bddd0e9c6938715, type: 2}
   - {fileID: 11400000, guid: 25b0cd6590226b04da3a733d6dd968ee, type: 2}
   - {fileID: 11400000, guid: b3a1895198fc14a4fa2d2a8f1b13d858, type: 2}
-  _visualOffset: {x: 0, y: -1.5}
+  _visualOffset: {x: 1.5, y: -3}
 --- !u!4 &992039027
 Transform:
   m_ObjectHideFlags: 0

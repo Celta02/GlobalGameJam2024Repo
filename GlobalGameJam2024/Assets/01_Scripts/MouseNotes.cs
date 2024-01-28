@@ -28,7 +28,7 @@ namespace CeltaGames
             if (!wasSuccessful) _mouse_fail.Play();
             switch (hitBoxType)
             {
-                case HitBoxType.Red:
+                case HitBoxType.Orange:
                     _mouse_note_1.Play();
                     break;
                 case HitBoxType.Blue:

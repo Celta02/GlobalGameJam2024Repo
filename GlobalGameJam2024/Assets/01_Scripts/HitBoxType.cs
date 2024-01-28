@@ -2,7 +2,7 @@
 {
     public enum HitBoxType
     {
-        Red,
+        Orange,
         Blue,
         Yellow,
         Green,

@@ -2,6 +2,7 @@
 using CeltaGames.ScriptableObjects;
 using UnityEngine;
 using UnityEngine.Pool;
+using Random = UnityEngine.Random;
 
 namespace CeltaGames
 {
@@ -11,6 +12,14 @@ namespace CeltaGames
         [SerializeField] HitBox _prefab;
         [SerializeField] HitBoxQueue _hitBoxQueue;
         [SerializeField] Transform _hitBoxParent;
+        
+        [Header("HitBoxesVisuals")]
+        [SerializeField] CellVisual _orangeVisual;
+        [SerializeField] CellVisual _blueVisual;
+        [SerializeField] CellVisual _yellowVisual;
+        [SerializeField] CellVisual _greenVisual;
+        [SerializeField] CellVisual _cyanVisual;
+        
         // [SerializeField] int _hitBoxLayerMask;
         [SerializeField] int _defaultPoolCapacity = 15;
         [SerializeField] int _poolMaxSize = 25;
@@ -77,7 +86,22 @@ namespace CeltaGames
         CellVisual GetRandomVisual()
         {
             var randomIndex = Random.Range(0, _availableVisuals.Count);
-            return _availableVisuals[randomIndex];
+            switch (_availableVisuals[randomIndex].Type)
+            {
+                case HitBoxType.Orange:
+                    return _orangeVisual;
+                case HitBoxType.Blue:
+                    return _blueVisual;
+                case HitBoxType.Yellow:
+                    return _yellowVisual;
+                case HitBoxType.Green:
+                    return _greenVisual;
+                case HitBoxType.Cyan:
+                    return _cyanVisual;
+                default:
+                    return null;
+            }
+            return _blueVisual;
         }
     }
 }
