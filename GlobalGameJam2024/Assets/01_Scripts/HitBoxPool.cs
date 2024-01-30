@@ -67,8 +67,17 @@ namespace CeltaGames
 
         void GetHitBox(HitBox hitBox)
         {
+            var cellVisual = GetRandomVisual();
+            var hitBoxType = hitBox.Type;
+            hitBoxType.Type = cellVisual.Type;
+            
+            var go = hitBox.gameObject;
+            if (!go.TryGetComponent(out SpriteRenderer sr)) return;
+            sr.sprite = cellVisual.CellSprite;
+            sr.color = cellVisual.Color;
+            
             hitBox.transform.position = _hitBoxQueue.LastPosition;
-            hitBox.gameObject.SetActive(true);
+            go.SetActive(true);
         }
 
         void ReleaseHitBox(HitBox hitBox)
@@ -101,7 +110,6 @@ namespace CeltaGames
                 default:
                     return null;
             }
-            return _blueVisual;
         }
     }
 }
