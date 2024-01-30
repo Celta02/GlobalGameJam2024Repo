@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _prefab: {fileID: 5761124787912585847, guid: e6fe77d91cc7d8746ad52b33cec86669, type: 3}
   _sprite: {fileID: 166103561, guid: 655e0e811e746ef418535d391f11c283, type: 3}
+  _hitSprite: {fileID: 934364244, guid: 655e0e811e746ef418535d391f11c283, type: 3}
   _color: {r: 1, g: 1, b: 1, a: 1}
   _type: 2

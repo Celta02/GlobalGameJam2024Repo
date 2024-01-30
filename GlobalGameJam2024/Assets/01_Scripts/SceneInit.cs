@@ -12,7 +12,7 @@ namespace CeltaGames
         [Range(1,10)]
         [SerializeField] int _initialPlayerPosition = 1;
 
-        void Start()
+        void Awake()
         {
             _playerPosition.Move(_initialPlayerPosition);
         }

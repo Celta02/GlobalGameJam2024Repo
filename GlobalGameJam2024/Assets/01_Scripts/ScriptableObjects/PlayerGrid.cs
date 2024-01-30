@@ -22,9 +22,7 @@ namespace CeltaGames.ScriptableObjects
             }
         }
         
-        public Cell GetCellAtPosition(int cellNumber) => 
-                cellNumber > NumberOfCells || cellNumber <= 0 ? null : _cells[cellNumber-1];
-        
+        public Cell GetCellAtPosition(int cellNumber) => cellNumber > NumberOfCells || cellNumber <= 0 ? null : _cells[cellNumber - 1];
         public Vector3 GetCellPosition(int cellNumber) => GetCellAtPosition(cellNumber).Position;
     }
 }
