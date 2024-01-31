@@ -11,7 +11,7 @@ namespace CeltaGames.ScriptableObjects
         MoodListener _moodListener;
         CatMoodLevel _currentMood;
         float _amountOfLevels = 5f;
-        float _levelsize;
+        float _levelSize;
 
         public CatMoodLevel CurrentMood => _currentMood;
 
@@ -22,12 +22,12 @@ namespace CeltaGames.ScriptableObjects
 
         void Start()
         {
-            _levelsize = _catMood.MaxMood / _amountOfLevels;
+            _levelSize = _catMood.MaxMood / _amountOfLevels;
         }
 
         void OnMoodChange(float mood)
         {
-            var newLevel = (int)(mood / _levelsize);
+            var newLevel = Mathf.Clamp((int)(mood / _levelSize),0,4) ;
             var newMood = (CatMoodLevel)newLevel;
 
             if (newMood == CurrentMood) return;

@@ -96,7 +96,7 @@ MonoBehaviour:
   Path: ../GGJ2024_FMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 638422448479212942
+  lastModified: 638422478533363800
   FileSizes:
   - Name: Desktop
     Value: 4266880
@@ -116,7 +116,7 @@ MonoBehaviour:
   Path: ../GGJ2024_FMOD/Build/Desktop/MouseNotes.bank
   Name: MouseNotes
   StudioPath: bank:/MouseNotes
-  lastModified: 638422448478784692
+  lastModified: 638422478532951391
   FileSizes:
   - Name: Desktop
     Value: 141920
@@ -136,7 +136,7 @@ MonoBehaviour:
   Path: ../GGJ2024_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638422448478486461
+  lastModified: 638422478532687610
   FileSizes:
   - Name: Desktop
     Value: 1164
@@ -168,6 +168,26 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 400
+--- !u!114 &-1480547865472929659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Cat.bank
+  m_EditorClassIdentifier: 
+  Path: ../GGJ2024_FMOD/Build/Desktop/Cat.bank
+  Name: Cat
+  StudioPath: bank:/Cat
+  lastModified: 638422478534939233
+  FileSizes:
+  - Name: Desktop
+    Value: 74752
+  Exists: 1
 --- !u!114 &-271440022073978696
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +232,7 @@ MonoBehaviour:
   - {fileID: -2293962590096900058}
   - {fileID: -3540337121355317830}
   - {fileID: -3566185221901099519}
+  - {fileID: -1480547865472929659}
   EditorEvents:
   - {fileID: -5410518811994443929}
   - {fileID: 8117220395903392844}
@@ -222,12 +243,13 @@ MonoBehaviour:
   - {fileID: 3734718278535987355}
   - {fileID: -271440022073978696}
   - {fileID: 6252980413944074690}
+  - {fileID: 7577823410767322653}
   EditorParameters: []
   MasterBanks:
   - {fileID: -2293962590096900058}
   StringsBanks:
   - {fileID: 5173668762121723645}
-  cacheTime: 638422448479212942
+  cacheTime: 638422478534939233
   cacheVersion: 131603
 --- !u!114 &1789181149998568067
 MonoBehaviour:
@@ -298,10 +320,10 @@ MonoBehaviour:
   Path: ../GGJ2024_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638422448478501499
+  lastModified: 638422478532707549
   FileSizes:
   - Name: Desktop
-    Value: 1194
+    Value: 1280
   Exists: 1
 --- !u!114 &6252980413944074690
 MonoBehaviour:
@@ -330,6 +352,33 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 96375
+--- !u!114 &7577823410767322653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/CatSound
+  m_EditorClassIdentifier: 
+  Path: event:/CatSound
+  Guid:
+    Data1: 1969461605
+    Data2: 1325341149
+    Data3: 506914183
+    Data4: -512264984
+  Banks:
+  - {fileID: -1480547865472929659}
+  IsStream: 0
+  Is3D: 1
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2000
 --- !u!114 &8117220395903392844
 MonoBehaviour:
   m_ObjectHideFlags: 0

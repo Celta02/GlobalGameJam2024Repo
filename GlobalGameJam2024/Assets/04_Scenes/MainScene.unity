@@ -1374,7 +1374,7 @@ MonoBehaviour:
   _playerGrid: {fileID: 11400000, guid: 6fc67a43a76980444a3be49650ed2114, type: 2}
   _cellsParent: {fileID: 728600511}
   _firstCellPosition: {x: -8, y: -2}
-  _spacing: 3
+  _spacing: 2.5
   _cellVisuals:
   - {fileID: 11400000, guid: f992f5a710c54eb4ca818bb24ac5b381, type: 2}
   - {fileID: 11400000, guid: 46224d36ec1a3bf4ebb0af49466a7c8d, type: 2}
@@ -1748,9 +1748,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _catMood: {fileID: 11400000, guid: 88a49684365ecf845b32160ea192ff92, type: 2}
   _hitEmitter: {fileID: 11400000, guid: e09ee1ea58f943b47ab9fe64d7a0a3ce, type: 2}
-  _startingHappiness: 700
-  _successReward: 20
-  _failurePunishment: -200
+  _startingHappiness: 650
+  _successReward: 25
+  _failurePunishment: -120
 --- !u!114 &1394768628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1764,7 +1764,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _catMood: {fileID: 11400000, guid: 88a49684365ecf845b32160ea192ff92, type: 2}
-  _reductionAmount: 0.5
+  _reductionAmount: 30
 --- !u!1 &1451898858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,6 +1778,8 @@ GameObject:
   - component: {fileID: 1451898863}
   - component: {fileID: 1451898862}
   - component: {fileID: 1451898861}
+  - component: {fileID: 1451898865}
+  - component: {fileID: 1451898864}
   m_Layer: 0
   m_Name: Cat
   m_TagString: Untagged
@@ -1900,6 +1902,51 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1451898864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451898858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1969461605
+      Data2: 1325341149
+      Data3: 506914183
+      Data4: -512264984
+    Path: event:/CatSound
+  Event: 
+  PlayEvent: 0
+  StopEvent: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  AllowNonRigidbodyDoppler: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 0
+  OverrideMaxDistance: 0
+--- !u!114 &1451898865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1451898858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3e1fa65406747de8455a73855997942, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _catMood: {fileID: 1451898861}
+  _catSound: {fileID: 1451898864}
 --- !u!1 &1615680757
 GameObject:
   m_ObjectHideFlags: 0
@@ -2092,20 +2139,6 @@ MonoBehaviour:
       Data3: -1142847076
       Data4: -1448770717
     Path: event:/MainTheme
-  _goodEnding:
-    Guid:
-      Data1: -286465055
-      Data2: 1283905730
-      Data3: 1909611427
-      Data4: 678962556
-    Path: event:/GoodEnding
-  _badEnding:
-    Guid:
-      Data1: -1293429426
-      Data2: 1215066067
-      Data3: -1790339701
-      Data4: 1609614921
-    Path: event:/BadEnding
 --- !u!1 &1775260740
 GameObject:
   m_ObjectHideFlags: 0

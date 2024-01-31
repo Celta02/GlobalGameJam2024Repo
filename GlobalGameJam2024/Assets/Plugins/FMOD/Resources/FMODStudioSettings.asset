@@ -241,6 +241,7 @@ MonoBehaviour:
   MasterBanks:
   - Master
   Banks:
+  - Cat
   - MouseNotes
   - Music
   BanksToLoad: []
